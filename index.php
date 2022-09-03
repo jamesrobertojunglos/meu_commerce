@@ -1,3 +1,6 @@
+<?php
+  include "bibliotecas/conexao.php"
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,21 +12,29 @@
   <body>
     <div class="container">
        <div class = "row">
-          <div class="col-12 bg-secondary">Cabeçalho</div>   
+          <div class="col-12 bg-secondary text-center">Meu Ecomerce</div>   
     </div>
 
         <div class = "row">
-            <div class="col-2 bg-primary">
-                Menu 
+            <div class= "col-2 bg-warning">
+              <?php
+                    include "menu.php";
+              ?>
             </div>
     
             <div class="col-10">
-                Corpo
+              <?php
+               if(isset($_GET['pagina'])) {
+                  include $_GET['pagina'].".php";
+               } else {
+                  include "home.php"; 
+               }
+               ?>
             </div>
         </div>
 
         <div class ="row">
-            <div class="col-12 bg-info text-align-center">rodapé</div>
+            <div class="col-12 bg-info text-center">@ Devti 2022 - Unidavi</div>
         </div>
 
     </div>
