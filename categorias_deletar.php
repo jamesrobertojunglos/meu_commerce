@@ -54,4 +54,3 @@ $categorias = $categorias_prepara->fetch();
 <?php
 }
 ?>
-sdsds
