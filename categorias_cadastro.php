@@ -3,8 +3,8 @@
 <?php
 if(isset($_POST['gravar'])) {
    $sql_salvar_categorias = "INSERT into categorias
-                            descricao
-                            values :descricao
+                            (descricao)
+                            values (:descricao)
    ";
    $categorias_salvar_prepara = $conn->prepare($sql_salvar_categorias);
    if ($categorias_salvar_prepara->execute(array("descricao"=> $_POST['descricao']))) {
@@ -24,7 +24,6 @@ if(isset($_POST['gravar'])) {
   <textarea class="form-control" name="descricao" placeholder="Descreva a categoria" id="floatingTextarea"></textarea>
   <label for="floatingTextarea">Informe a Categoria</label>
   <br>
-
 </div>
 
     <input class="btn btn-success" type="submit" name="gravar" value="Gravar">
