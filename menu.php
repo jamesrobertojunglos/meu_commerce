@@ -1,5 +1,12 @@
-<a class="btn btn-link" href="?">Home</a>
-<br>
-<a class="btn btn-link" href="?pagina=categorias_listagem">Categorias</a> 
-<br>
-<a class="btn btn-link" href="?pagina=contato&nome=james">Contado</a> 
+<?php
+$sql = "SELECT *
+        FROM paginas
+";
+$consulta = $conn->prepare($sql);
+$resultado = $consulta->execute();
+while ($linha_menu = $consulta->fetch()) {
+    echo "<a href=\"?pagina={$linha_menu['url']}\">{$linha_menu['label']}</a> - ";
+}
+?>
+<a href="?pagina=logout">Sair</a>
+<hr>
