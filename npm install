@@ -1,0 +1,20 @@
+
+//Abrir o terminal na pasta do projeto, pode ser o terminal dentro do VSCode.
+//Menu Terminal > Novo terminal.
+
+//Digital o comando: npm install
+
+//Aguardar a instalação e pronto, abra os arquivos no VSCode e experimente salvalos.
+//Eles deve ser reformatados.
+
+
+o erro:
+
+PS C:\xampp\htdocs\filmes1> npm intall
+npm : O termo 'npm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a grafia do nome ou, se um caminho 
+tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:1 caractere:1
++ npm intall
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (npm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
