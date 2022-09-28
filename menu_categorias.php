@@ -1,9 +1,15 @@
 <?php
-$sql_categorias ="SELECT * from categorias";
+$sql_categorias = 'SELECT * from categorias order by id';
 $sql_prepara = $conn->prepare($sql_categorias);
 $categorias = $sql_prepara->execute();
 
 while ($categoria = $sql_prepara->fetch()) {
-   echo "<a href=\"?pagina={$categoria['id']}\">{$categoria['descricao']}</a><br>";
+   if(!empty($categoria['categoria_pai'])) {
+      $identacao = "&nbsp;&nbsp;&nbsp;";
+   } else {
+      $identacao = '';
+   }
+   echo "{$identacao}<a href=\"?pagina=produtos&categoria={$categoria['id']}
+   \"class=\"btn btn-link\">{$categoria['descricao']}</a><br>";
 }
 ?>
