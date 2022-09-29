@@ -12,6 +12,25 @@ if (isset($_GET['pagina']) && $_GET['pagina'] == 'logout') {
   include_once 'lib/conexao.php';
   include_once 'lib/sql.php';
   include_once 'lib/autenticar.php';
+
+      //limpar sacola
+    if (isset($_POST['limpar_sacola'])) {
+      unset ($_SESSION['sacola']);
+    }
+
+    //adicionar a sacola
+    if (isset($_POST['adicionar_sacola'])) {
+      $_SESSION['sacola'][] = $_GET['id'];
+    }
+
+    //remover da sacola
+
+  if (isset($_POST['remover_sacola'])) {
+      unset($_SESSION['sacola'][$_POST['produto']]);
+    
+  }
+    
+
   include_once 'home.php';
 // if (isset($_SESSION['autenticado'])) {
 //     if (isset($_GET['pagina'])) {
@@ -40,6 +59,6 @@ if (isset($_GET['pagina']) && $_GET['pagina'] == 'logout') {
 
 if (isset($SESSION['debug'])) {
   if ($_SESSION['debug'] == true) {
-    include 'liv/debug.php';
+    include 'lib/debug.php';
   }
 }

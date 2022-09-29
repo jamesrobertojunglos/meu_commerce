@@ -15,7 +15,7 @@
                 <div class="col">Banner</div>
             </div>
             <div class="row">
-                <div class="col">Menu Horizontal</div>
+                <div class="col"><?php include 'menu_horizontal.php'?></div>
             </div>
             <div class="row">
                 <div class="col-3">
@@ -25,9 +25,15 @@
                     <?php
                         if (isset($_GET['pagina'])) {
                         if ($_GET['pagina'] =='produtos') {
-                        include 'produtos_home.php';
+                            include 'produtos_home.php';
                         }
-                        } else {
+                        if ($_GET['pagina'] =='produto') {
+                            include 'produto_detalhes.php';
+                        }
+                         if ($_GET['pagina'] =='sacola') {
+                            include 'sacola.php';
+                        }
+                 } else {
                           include "produtos_destaque.php" ; 
                         }
                     ?>
