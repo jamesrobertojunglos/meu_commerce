@@ -32,6 +32,16 @@
                         }
                          if ($_GET['pagina'] =='sacola') {
                             include 'sacola.php';
+                         }
+                         if ($_GET['pagina'] =='meus_pedidos') {
+                            include 'meus_pedidos.php';
+                        }
+                        if ($_GET['pagina'] =='realizar_pedido') {
+                            if (!isset($_SESSION['autenticado'])){
+                                include 'login.php';
+                            } else {
+                                 include 'realizar_pedido.php';
+                            }  
                         }
                  } else {
                           include "produtos_destaque.php" ; 

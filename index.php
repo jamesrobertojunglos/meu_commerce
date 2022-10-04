@@ -2,13 +2,15 @@
 session_start();
 
 if (isset($_GET['debug'])) {
-  $_session['debug'] = $_GET['debug'];
+  $_SESSION['debug'] = $_GET['debug'];
 }
 
 if (isset($_GET['pagina']) && $_GET['pagina'] == 'logout') {
-    session_destroy();
-    session_start();
+   session_destroy();
+   session_start();
+   header('Location ?');
 }
+
   include_once 'lib/conexao.php';
   include_once 'lib/sql.php';
   include_once 'lib/autenticar.php';

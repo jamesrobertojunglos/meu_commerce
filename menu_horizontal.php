@@ -5,3 +5,15 @@
         echo "(".count($_SESSION['sacola']).")";
     } ?>
 </a>
+
+<?php
+if ($_SESSION['autenticado']) {
+
+?>
+<a class="btn btn-info" href=" ?pagina=meus_pedidos">Meus pedidos</a>
+
+<?php
+
+}
+
+?>
