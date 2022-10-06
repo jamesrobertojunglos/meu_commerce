@@ -1,18 +1,17 @@
-<h1>Produtos em destaque </h1>
+<h1>Produtos em Destaque </h1>
 
 
 <?php
 if (isset($_GET['categoria'])) {
     $sql_produtos_destaque = '
-SELECT id, descricao, valor, resumo, imagem
-FROM produtos
-WHERE categoria_pai = :categoria_id
-  AND categoria = :categoria_id
-ORDER BY RAND()
+ SELECT p.id, p.descricao, p.valor, p.resumo, p.imagem
+ FROM produtos p 
+        WHERE p.categoria_id in (select id from categorias where categoria_pai = :categoria_id or id = :categoria_id)
+        ORDER BY RAND()
 LIMIT 6 ;
 ';
 $sql_produtos_destaque = $conn->prepare($sql_produtos_destaque);
-$sql_produtos_destaque->execute(["categoria_id" =>$_GET['categoria']]);    
+$sql_produtos_destaque->execute(['categoria_id' =>$_GET['categoria']]);    
 } else {
 $sql_produtos_destaque = '
 SELECT id, descricao, valor, resumo, imagem
