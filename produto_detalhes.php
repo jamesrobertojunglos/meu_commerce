@@ -18,7 +18,7 @@ $produto_detalhes = $produto->fetch();
                 <script>
                 $(".sacola").click(function() {
                     $.post("", {
-                        "acicionar_sacola": true
+                        "adicionar_sacola": true
                     }, function(data, status) {
                         Swal.fire({
                             title: 'Sucesso!',
