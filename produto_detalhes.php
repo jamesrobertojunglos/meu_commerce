@@ -13,6 +13,7 @@ $produto_detalhes = $produto->fetch();
             <h5 class="card-title"><?php echo $produto_detalhes['descricao'];?></h5>
             <p class="card-text"><?php echo $produto_detalhes['resumo'];?></p>
             <h3 class="card-text">R$ <?php echo $produto_detalhes['valor'];?>,00</h3>
+            </p>
             <p class="card-text">
                 <button class="sacola btn btn-primary">Adicionar a sacola</button>
                 <script>
@@ -20,12 +21,13 @@ $produto_detalhes = $produto->fetch();
                     $.post("", {
                         "adicionar_sacola": true
                     }, function(data, status) {
-                        Swal.fire({
+                        swal.fire({
                             title: 'Sucesso!',
                             text: 'Seu produto foi adicionado a sacola',
                             icon: 'success',
                             confirmButtonText: 'ok'
                         })
+
                     });
                 });
                 </script>
