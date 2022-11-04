@@ -27,7 +27,6 @@ $produto_detalhes = $produto->fetch();
                             icon: 'success',
                             confirmButtonText: 'ok'
                         })
-
                     });
                 });
                 </script>
