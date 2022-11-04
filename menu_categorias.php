@@ -11,5 +11,6 @@ while ($categoria = $sql_prepara->fetch()) {
    }
    echo "{$identacao}<a href=\"?pagina=produtos&categoria={$categoria['id']}
    \"class=\"btn btn-link\">{$categoria['descricao']}</a><br>";
+  
 }
 ?>

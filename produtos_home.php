@@ -26,7 +26,7 @@ while($produto = $consulta_produtos->fetch()) {
             <p class="card-text"><?php echo $produto['resumo'];?></p>
             <a href="?pagina=produto&id=<?php echo $produto['id']; ?>" class="btn btn-primary">Detalhes</a>
         </div>
-    </div>
+</div>
     <?php }
 ?>
 </div>
