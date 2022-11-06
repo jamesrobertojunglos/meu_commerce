@@ -48,6 +48,7 @@ if (isset($_SESSION['sacola'])) { ?>
                     <input type="hidden" name="produto" value="<?php echo $item; ?>">
                     <input class="btn btn-danger" type="submit" name="remover_sacola" value="Remover">
                     </script>
+                    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 </form>
             </td>
         </tr>
