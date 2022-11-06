@@ -8,6 +8,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="js/jquery-3.6.1.min.js"></script>
     </head>
 
 </html>
@@ -15,18 +17,19 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="row align-items-center" style="background-color:brown">
+            <div class="col-12 text-center" style="background-color:aqua">
                 <h1>Meu Commerce</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col"><?php include 'menu_horizontal.php'?></div>
+            <div class="col align-items-center" style="background-color:blue"><?php include 'menu_horizontal.php'?>
+            </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="col-4" style="background-color:darkgoldenrod">
                 <?php include "menu_categorias.php" ; ?>
             </div>
-            <div class="col-9">
+            <div class="col-8">
                 <?php
                         if (isset($_GET['pagina'])) {
                         if ($_GET['pagina'] =='produtos') {
@@ -55,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="row" style="background-color:aqua">@meu_commerce 2022</div>
+    <div class="col-12 text-center" style="background-color:aqua">@meu_commerce 2022</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -64,6 +67,14 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script>
+    //Swal.fire({
+    //icon: 'error',
+    //title: 'Oops...',
+    //text: 'Something went wrong!',
+    //footer: '<a href="">Why do I have this issue?</a>'
+    //})
+    </script>
 
 </body>
 

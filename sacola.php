@@ -1,3 +1,18 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="js/jquery-3.6.1.min.js"></script>
+    </head>
+
+</html>
 <?php
 if (isset($_SESSION['sacola'])) { ?>
 <form method="post">
@@ -32,6 +47,7 @@ if (isset($_SESSION['sacola'])) { ?>
                 <form method="POST">
                     <input type="hidden" name="produto" value="<?php echo $item; ?>">
                     <input class="btn btn-danger" type="submit" name="remover_sacola" value="Remover">
+                    </script>
                 </form>
             </td>
         </tr>

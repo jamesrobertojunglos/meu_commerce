@@ -22,7 +22,7 @@
 } ?>
 <div class="row">
     <?php while ($produto = $sql_produtos_destaque->fetch()) { ?>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="background-color:darkslategray" style="width: 18rem;">
         <img src="<?php echo $produto['imagem']; ?>" class="card-img-top" alt="<?php echo $produto[
     'descricao'
 ]; ?>">
