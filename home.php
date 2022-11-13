@@ -67,13 +67,14 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
+    //<script>
     //Swal.fire({
-    //icon: 'error',
-    //title: 'Oops...',
+    // icon: 'error',
+    // title: 'Oops...',
     //text: 'Something went wrong!',
     //footer: '<a href="">Why do I have this issue?</a>'
     //})
+    //
     </script>
 
 </body>
