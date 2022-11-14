@@ -6,7 +6,7 @@
         FROM produtos p
         WHERE p.categoria_id in (select id from categorias where categoria_pai = :categoria_id or id = :categoria_id)
         ORDER BY RAND()
-        LIMIT 6
+        LIMIT 3
     ';
     $sql_produtos_destaque = $conn->prepare($sql_produtos_destaque);
     $sql_produtos_destaque->execute(['categoria_id' => $_GET['categoria']]);

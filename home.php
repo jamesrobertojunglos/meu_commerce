@@ -22,14 +22,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col align-items-center" style="background-color:blue"><?php include 'menu_horizontal.php'?>
+            <div class style="background-color:blue"><?php include 'menu_horizontal.php'?>
             </div>
         </div>
         <div class="row">
             <div class="col-4" style="background-color:darkgoldenrod">
                 <?php include "menu_categorias.php" ; ?>
             </div>
-            <div class="col-8">
+            <div class="col-8" style="background-color:cadetblue" style="background-color:aqua">
                 <?php
                         if (isset($_GET['pagina'])) {
                         if ($_GET['pagina'] =='produtos') {
@@ -67,7 +67,7 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    //<script>
+    <script>
     //Swal.fire({
     // icon: 'error',
     // title: 'Oops...',
