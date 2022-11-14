@@ -26,16 +26,15 @@ if (isset($_GET['pagina']) && $_GET['pagina'] == 'logout') {
     }
 
     //remover da sacola
-
-  if (isset($_POST['remover_sacola'])) {
-      unset($_SESSION['sacola'][$_POST['produto']]);
-    
-  }
+    if (isset($_POST['remover_sacola'])) {
+        unset($_SESSION['sacola'][$_POST['produto']]);
+      
+    }
     
 
   include_once 'home.php';
- if (isset($_SESSION['autenticado'])) {
-    if (isset($_GET['pagina'])) {
+  if (isset($_SESSION['autenticado'])) {
+      if (isset($_GET['pagina'])) {
         //buscar no banco de dados se a página requisitada existe
       $sql = "SELECT *
                    FROM paginas
