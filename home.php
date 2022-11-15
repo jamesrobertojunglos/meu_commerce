@@ -26,10 +26,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4" style="background-color:darkgoldenrod">
+            <div class="col-3" style="background-color:darkgoldenrod">
                 <?php include "menu_categorias.php" ; ?>
             </div>
-            <div class="col-8" style="background-color:cadetblue" style="background-color:aqua">
+            <div class="col-9" style="background-color:cadetblue" style="background-color:aqua">
                 <?php
                         if (isset($_GET['pagina'])) {
                         if ($_GET['pagina'] =='produtos') {
